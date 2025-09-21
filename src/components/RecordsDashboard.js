@@ -11,7 +11,9 @@ export const RecordsDashboard = () => {
   useEffect(() => {
     const getAllEmployee = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/employee");
+        const response = await axios.get(
+          `${process.env.REACT_APP_BACKEND_URL}/employee`
+        );
         console.log(response.data);
         if (response?.data?.data?.length) {
           console.log(response.data?.data);

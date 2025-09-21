@@ -202,7 +202,7 @@ export default function Form({
       const userData = formData;
       try {
         const response = await axios.post(
-          "http://localhost:8000/employee",
+          `${process.env.REACT_APP_BACKEND_URL}/employee`,
           userData
         );
         console.log("User created successfully:", response.data);

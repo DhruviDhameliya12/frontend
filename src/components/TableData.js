@@ -179,7 +179,7 @@ export default function TableData({ tableData = [], setTableData }) {
   const handleUpdateRecord = async (updatedData) => {
     try {
       const response = await axios.patch(
-        `http://localhost:8000/employee/${selectedRecord.id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/employee/${selectedRecord.id}`,
         updatedData
       );
 
